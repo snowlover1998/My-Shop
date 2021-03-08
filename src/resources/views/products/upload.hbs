@@ -1,0 +1,47 @@
+<div class="grid wide">
+  <div class="row product-upload ">
+    <div class="col l-6 m-12 c-12">
+      <h3 class="product-upload__title">Đăng sản phẩm</h3>
+
+      <form class="product-upload__form" enctype="multipart/form-data" method="POST" action="/products/store">
+        <div class="form-group">
+          <label class="product-upload__label" for="name">Tên sản phẩm:</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+
+        <div class="form-group">
+          <label class="product-upload__label" for="description">Mô tả:</label>
+          <textarea class="form-control product-upload__text-area" id="description" name="description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="product-upload__label" for="image">Hình ảnh:</label>
+          <input type="file" class="form-control" id="image" name="image" multiple>
+        </div>
+
+        <div class="form-group">
+          <label class="product-upload__label" for="brand">Nhãn hiệu:</label>
+          <input type="text" class="form-control" id="brand" name="brand">
+        </div>
+
+        <div class="form-group">
+          <label class="product-upload__label" for="country">Xuất xứ:</label>
+          <input type="text" class="form-control" placeholder="Nơi sản xuất" id="country" name="country">
+        </div>
+
+        <div class="form-group">
+          <label class="product-upload__label" for="price">Giá sản phẩm:</label>
+          <input type="text" class="form-control" placeholder="VNĐ" id="price" name="price">
+        </div>
+
+        <div class="form-group">
+          <label class="product-upload__label" for="salePrice">Giảm giá: </label>
+          <input type="text" class="form-control" placeholder="VNĐ" id="salePrice" name="salePrice">
+        </div>
+
+        <button type="submit" class="btn btn--primary product-upload__btn">Thêm sản phẩm</button>
+      </form>
+    </div>
+
+  </div>
+</div>

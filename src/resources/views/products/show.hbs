@@ -1,0 +1,259 @@
+<div class="app__container">
+  <div class="grid wide">
+
+    <div class="row sm-gutter">
+      <div class="show-product">
+        <div class="col l-5 m-12 c-12">
+          <div class="show-product-images">
+            <div class="show-product-images__current-img">
+              <img src="data:{{product.image.[0].contentType}};base64,{{product.image.[0].data}}" alt=""
+                class="show-product-images__current-img-item ">
+              <div class="show-product-images__current-img-zoom-lens">
+              </div>
+              <div class="show-product-images__current-img-zoom-result"></div>
+            </div>
+            <div class="show-product-images__more-imgs">
+
+              {{#each product.image}}
+              <div class="show-product-images__slider-img"
+                style="background-image: url(data:{{this.contentType}};base64,{{this.data}});">
+              </div>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        <div class="col l-7 m-12 c-12">
+          <div class="show-product-desc">
+            <h3 class="show-product-item__name">{{product.name}}</h3>
+
+            <div class="show-product-item__sold-rating">
+              <div class="show-product-item__rating">
+                <i class="show-product-item__star--gold fas fa-star"></i>
+                <i class="show-product-item__star--gold fas fa-star"></i>
+                <i class="show-product-item__star--gold fas fa-star"></i>
+                <i class="show-product-item__star--gold fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="show-product-item__sold">
+                <span class="show-product-item__sold-number">88</span>
+                <span class="show-product-item__sold-text">đã bán</span>
+              </div>
+            </div>
+            <div class="show-product-item__price">
+              <span class="show-product-item__price-old">{{showPrice product.price 0}}</span>
+              <span class="show-product-item__price-current">{{showPrice product.price product.salePrice}}</span>
+              <div class="show-product-item__price-sale">
+                <span class="show-product-item__price-sale-percent">{{salePecents product.price
+                  product.salePrice}}</span>
+                <span class="show-product-item__price-sale-label">GIẢM</span>
+              </div>
+            </div>
+            <div class="show-product-item__transport">
+              <span class="show-product-item__transport-label">Vận chuyển</span>
+
+              <div class="show-product-item__transport-wrap">
+                <div class="show-product-item__transport-shipping flex">
+                  <img src="/img/free_ship.png" alt="" class="show-product-item__transport-shipping-icon">
+                  <span>Miễn Phí Vận Chuyển</span>
+                </div>
+                <div class="show-product-item__transport-from-wrap">
+                  <span class="show-product-item__transport-from-label">Vận chuyển tới</span>
+                  <span class="show-product-item__transport-from">Huyện Ba Vì, Hà Nội</span>
+                </div>
+                <div class="show-product-item__transport-fee-wrap">
+                  <span class="show-product-item__transport-fee-label">Phí vận chuyển</span>
+                  <span class="show-product-item__transport-fee">₫0</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="show-product-item__quantity">
+              <span class="show-product-item__quantity-label" for="show-product-item__quantity-number">Số lượng</span>
+              <button class="show-product-item__quantity-number--minus"><i class="fas fa-minus"></i></button>
+
+              <input type="text" class="form-control" id="show-product-item__quantity-input-number"
+                name="show-product-item__quantity-number" value="1">
+
+              <button class="show-product-item__quantity-number--plus"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="show-product-item__btn">
+              <button class="show-product-item__add-btn btn">
+                <i class="fas fa-cart-plus show-product-item__cart-plus-icon"></i>
+                Thêm vào giỏ hàng
+              </button>
+              <button class="show-product-item__buy-now-btn btn btn--primary">Mua ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-product-content">
+      <div class="row sm-gutter">
+        <div class="col l-10 m-12 c-12">
+          <div class="show-product-info">
+            <div class="show-product-info__detail-label">CHI TIẾT SẢN PHẨM</div>
+            <div class="show-product-info__detail">
+              <div class="show-product-info__detail-brand-wrap mb-16">
+                <span class="show-product-info__detail-brand-label">Thương hiệu</span>
+                <span class="show-product-info__detail-brand">{{product.brand}}</span>
+              </div>
+
+              <div class="show-product-info__detail-country-wrap mb-16">
+                <span class="show-product-info__detail-country-label">Xuất xứ</span>
+                <span class="show-product-info__detail-country">{{product.country}}</span>
+              </div>
+
+              <div class="show-product-info__detail-remain-wrap mb-16">
+                <span class="show-product-info__detail-remain-label">Kho hàng</span>
+                <span class="show-product-info__detail-remain">150</span>
+              </div>
+
+              <div class="show-product-info__detail-from-wrap mb-16">
+                <span class="show-product-info__detail-from-label">Gửi từ</span>
+                <span class="show-product-info__detail-from">Quận 1, TP.HCM</span>
+              </div>
+            </div>
+
+            <div class="show-product-info__desc-label">MÔ TẢ SẢN PHẨM</div>
+            <div class="show-product-info__desc">
+              <span class="show-product-info__desc-content">
+                {{product.description}}
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col l-10 m-12 c-12">
+          <div class="show-product-evaluate">
+            <div class="show-product-evaluate__title">ĐÁNH GIÁ SẢN PHẨM</div>
+            <div class="show-product-evaluate__content">
+              <img class="show-product-evaluate__content-no-rating-img" src="/img/no_rating.png" alt="">
+              <span class="show-product-evaluate__content-no-rating-text">Chưa có đánh giá</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="show-product-hot-sales">
+        <span class="show-product-hot-sales__label">Top sản phẩm bán chạy</span>
+        <div class="show-product-hot-sales__item">
+          <img src="https://img.abaha.vn/photos/resized/320x/83-1574920726-myphamohui-lgvina.png"
+            class="show-product-hot-sales__img"></img>
+          <span class="show-product-hot-sales__item-name">Set Ohui Xanh mini PRIME ADVANCER 3 món</span>
+          <span class="show-product-hot-sales__item-price">1.290.000đ</span>
+        </div>
+        <div class="show-product-hot-sales__item">
+          <img src="https://img.abaha.vn/photos/resized/320x/83-1574920726-myphamohui-lgvina.png"
+            class="show-product-hot-sales__img"></img>
+          <span class="show-product-hot-sales__item-name">Set Ohui Xanh mini PRIME ADVANCER 3 món</span>
+          <span class="show-product-hot-sales__item-price">1.290.000đ</span>
+        </div>
+        <div class="show-product-hot-sales__item">
+          <img src="https://img.abaha.vn/photos/resized/320x/83-1574920726-myphamohui-lgvina.png"
+            class="show-product-hot-sales__img"></img>
+          <span class="show-product-hot-sales__item-name">Set Ohui Xanh mini PRIME ADVANCER 3 món</span>
+          <span class="show-product-hot-sales__item-price">1.290.000đ</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+
+
+    /*$('.show-product-images__slider-img').hover(function (e) {
+      $('.show-product-images__slider-img-item').removeClass('selected');
+      $('.show-product-images__current-img').attr('style', e.target.getAttribute('style'))
+      $(e.target.classList.add('selected'))
+    })*/
+    //$('.show-product-images__slider-img').blur(function (e) {
+    //$('.show-product-images__slider-img-item').removeClass('selected')
+    //}
+
+    var hoverImages = document.querySelectorAll('.show-product-images__slider-img');
+    var currentImage = document.querySelector('.show-product-images__current-img');
+    var currentImageItem = document.querySelector('.show-product-images__current-img-item');
+    var resultClass = document.querySelector('.show-product-images__current-img-zoom-result');
+
+    function removeAllClass(nodeList, className) {
+      nodeList.forEach(element => {
+        element.style.borderColor = 'transparent';
+        element.classList.remove(className);
+      })
+    }
+
+    hoverImages.forEach(hoverImage => {
+      hoverImage.addEventListener("mouseover", function (e) {
+        removeAllClass(hoverImages, 'selected');
+        var url = hoverImage.style.backgroundImage.slice(4, -1).replace(/["']/g, "");
+        currentImageItem.src = url;
+        e.target.classList.add('selected');
+        imageZoom(currentImageItem, resultClass, currentImage)
+      });
+      imageZoom(currentImageItem, resultClass, currentImage)
+
+    })
+
+    currentImageItem.addEventListener('mouseover', function (e) {
+      resultClass.style.visibility = 'visible';
+    })
+
+    currentImageItem.addEventListener('mouseout', function (e) {
+      resultClass.style.visibility = 'hidden';
+    })
+
+    function imageZoom(imgClass, resultClass, currentImage) {
+      var img, lens, result, cx, cy;
+      img = imgClass;
+      result = resultClass;
+      var currentImg = currentImage;
+
+      lens = document.querySelector('.show-product-images__current-img-zoom-lens')
+
+      cx = result.offsetWidth / lens.offsetWidth;
+      cy = result.offsetHeight / lens.offsetHeight;
+
+      result.style.backgroundImage = "url('" + img.src + "')";
+      result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+
+      lens.addEventListener("mousemove", moveLens);
+      img.addEventListener("mousemove", moveLens);
+      lens.addEventListener("touchmove", moveLens);
+      img.addEventListener("touchmove", moveLens);
+
+      function moveLens(e) {
+        var pos, x, y;
+        e.preventDefault();
+        pos = getCursorPos(e);
+        x = pos.x - (lens.offsetWidth / 2);
+        y = pos.y - (lens.offsetHeight / 2);
+        if (x > currentImg.width - lens.offsetWidth) { x = currentImg.width - lens.offsetWidth; }
+        if (x < 0) { x = 0; }
+        if (y > currentImg.height - lens.offsetHeight) { y = currentImg.height - lens.offsetHeight; }
+        if (y < 0) { y = 0; }
+        lens.style.left = x + "px";
+        lens.style.top = y + "px";
+        result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+      }
+
+      function getCursorPos(e) {
+        var a, x = 0, y = 0;
+        e = e || window.event;
+        a = img.getBoundingClientRect();
+        x = e.pageX - a.left;
+        y = e.pageY - a.top;
+        x = x - window.pageXOffset;
+        y = y - window.pageYOffset;
+        return { x: x, y: y };
+      }
+    }
+
+
+
+  });
+</script>
