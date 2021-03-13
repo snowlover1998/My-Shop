@@ -46,6 +46,16 @@ class ProductController {
       })
       .catch(next);
   }
+
+  pro(req, res, next) {
+    Product.find({})
+      .then(products => {
+        // let newProducts = binaryToBase64.homeImgBinaryToBase64(products);
+        // res.render('home', { products: multipleMongooseToObject(newProducts) })
+        return res.json(products);
+      })
+      .catch(next);
+  }
 }
 
 module.exports = new ProductController;

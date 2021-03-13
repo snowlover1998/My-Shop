@@ -176,8 +176,7 @@
     //}
 
     var hoverImages = document.querySelectorAll('.show-product-images__slider-img');
-    var currentImage = document.querySelector('.show-product-images__current-img');
-    var currentImageItem = document.querySelector('.show-product-images__current-img-item');
+    var currentImage = document.querySelector('.show-product-images__current-img-item');
     var resultClass = document.querySelector('.show-product-images__current-img-zoom-result');
 
     function removeAllClass(nodeList, className) {
@@ -191,27 +190,26 @@
       hoverImage.addEventListener("mouseover", function (e) {
         removeAllClass(hoverImages, 'selected');
         var url = hoverImage.style.backgroundImage.slice(4, -1).replace(/["']/g, "");
-        currentImageItem.src = url;
+        currentImage.src = url;
         e.target.classList.add('selected');
-        imageZoom(currentImageItem, resultClass, currentImage)
+        imageZoom(currentImage, resultClass)
       });
-      imageZoom(currentImageItem, resultClass, currentImage)
+      imageZoom(currentImage, resultClass)
 
     })
 
-    currentImageItem.addEventListener('mouseover', function (e) {
+    currentImage.addEventListener('mouseover', function (e) {
       resultClass.style.visibility = 'visible';
     })
 
-    currentImageItem.addEventListener('mouseout', function (e) {
+    currentImage.addEventListener('mouseout', function (e) {
       resultClass.style.visibility = 'hidden';
     })
 
-    function imageZoom(imgClass, resultClass, currentImage) {
+    function imageZoom(imgClass, resultClass) {
       var img, lens, result, cx, cy;
       img = imgClass;
       result = resultClass;
-      var currentImg = currentImage;
 
       lens = document.querySelector('.show-product-images__current-img-zoom-lens')
 
@@ -232,9 +230,9 @@
         pos = getCursorPos(e);
         x = pos.x - (lens.offsetWidth / 2);
         y = pos.y - (lens.offsetHeight / 2);
-        if (x > currentImg.width - lens.offsetWidth) { x = currentImg.width - lens.offsetWidth; }
+        if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth; }
         if (x < 0) { x = 0; }
-        if (y > currentImg.height - lens.offsetHeight) { y = currentImg.height - lens.offsetHeight; }
+        if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight; }
         if (y < 0) { y = 0; }
         lens.style.left = x + "px";
         lens.style.top = y + "px";

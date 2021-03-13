@@ -4,6 +4,7 @@ const binaryToBase64 = require('../../util/imageHandler');
 
 class HomeController {
   index(req, res, next) {
+
     Product.find({})
       .then(products => {
         let newProducts = binaryToBase64.homeImgBinaryToBase64(products);
@@ -11,6 +12,6 @@ class HomeController {
       })
       .catch(next);
   };
-};
+}
 
 module.exports = new HomeController;
