@@ -7,13 +7,13 @@
 
                     <ul class="category-list">
                         <li class="category-item category-item--active">
-                            <a href="#" id='test' class="category-item__link">Trang điểm mặt</a>
+                            <a class="category-item__link" href="#" id='test'>Trang điểm mặt</a>
                         </li>
                         <li class="category-item">
-                            <a href="#" class="category-item__link">Trang điểm môi</a>
+                            <a class="category-item__link" href="#">Trang điểm môi</a>
                         </li>
                         <li class="category-item">
-                            <a href="#" class="category-item__link">Trang điểm mắt</a>
+                            <a class="category-item__link" href="#">Trang điểm mắt</a>
                         </li>
                     </ul>
                 </nav>
@@ -33,10 +33,10 @@
                         <!-- List option -->
                         <ul class="select-input__list">
                             <li class="select-input__item">
-                                <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                <a class="select-input__link" href="">Giá: Thấp đến cao</a>
                             </li>
                             <li class="select-input__item">
-                                <a href="" class="select-input__link">Giá: Cao đến thấp</a>
+                                <a class="select-input__link" href="">Giá: Cao đến thấp</a>
                             </li>
                         </ul>
                     </div>
@@ -47,10 +47,11 @@
             </span>
 
                         <div class="home-filter__page-control">
-                            <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                            <a class="home-filter__page-btn home-filter__page-btn--disabled" href="">
                                 <i class="home-filter__page-icon fas fa-angle-left"></i>
                             </a>
-                            <a href="" class="home-filter__page-btn">
+                            <a class="home-filter__page-btn" href="">
+
                                 <i class="home-filter__page-icon fas fa-angle-right"></i>
                             </a>
                         </div>
@@ -60,122 +61,124 @@
                 <nav class="mobile-category">
                     <ul class="mobile-category__list">
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                         <li class="mobile-category__item">
-                            <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                            <a class="mobile-category__link" href="">Dụng cụ & thiết bị tiện ích</a>
                         </li>
                     </ul>
                 </nav>
 
-         <div class="home-product">
-          <!-- Grid -> row -> column -->
-          <!-- Product item -->
-          <div class="row sm-gutter test1">
-              <div class="test2">
-            <div class="col l-2-4 m-4 c-6">
-              <!-- Product item -->
-              <a class="home-product-item" href="/products/show/\{{slug}}">
-                <div class="home-product-item__img"
-                  style="background-image: url(data:\{{image.[0].contentType}};base64,{{image.[0].data}});">
-                </div>
-                <h4 class="home-product-item__name">\{{name}}</h4>
-                <div class="home-product-item__price">
-                  <span class="home-product-item__price-old">{{showPrice price 0}}</span>
-                  <span class="home-product-item__price-current">{{showPrice price salePrice}}</span>
-                </div>
-                <div class="home-product-item__action">
+                <div class="home-product">
+                    <!-- Grid -> row -> column -->
+                    <!-- Product item -->
+                    <div class="row sm-gutter test1">
+                        <div class="test2">
+                            <div class="col l-2-4 m-4 c-6">
+                                <!-- Product item -->
+                                <a class="home-product-item" href="/products/show/\{{slug}}">
+                                    <div class="home-product-item__img"
+                                         style="background-image: url(data:\{{image.[0].contentType}};base64,{{image.[0].data}});">
+                                    </div>
+                                    <h4 class="home-product-item__name">\{{name}}</h4>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">{{showPrice price 0}}</span>
+                                        <span class="home-product-item__price-current">{{showPrice price
+                                                                                                   salePrice}}</span>
+                                    </div>
+                                    <div class="home-product-item__action">
                   <span class="home-product-item__like home-product-item__like--liked">
                     <i class="home-product-item__like-icon-empty far fa-heart"></i>
                     <i class="home-product-item__like-icon-fill fas fa-heart"></i>
                   </span>
-                  <div class="home-product-item__rating">
-                    <i class="home-product-item__star--gold fas fa-star"></i>
-                    <i class="home-product-item__star--gold fas fa-star"></i>
-                    <i class="home-product-item__star--gold fas fa-star"></i>
-                    <i class="home-product-item__star--gold fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <span class="home-product-item__sold">88 đã bán</span>
-                </div>
+                                        <div class="home-product-item__rating">
+                                            <i class="home-product-item__star--gold fas fa-star"></i>
+                                            <i class="home-product-item__star--gold fas fa-star"></i>
+                                            <i class="home-product-item__star--gold fas fa-star"></i>
+                                            <i class="home-product-item__star--gold fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">88 đã bán</span>
+                                    </div>
 
-                <div class="home-product-item__origin">
-                  <span class="home-product-item__brand">\{{brand}}</span>
-                  <span class="home-product-item__origin-name">\{{country}}</span>
+                                    <div class="home-product-item__origin">
+                                        <span class="home-product-item__brand">\{{brand}}</span>
+                                        <span class="home-product-item__origin-name">\{{country}}</span>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">{{salePecents price
+                                                                                                        salePrice}}</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="home-product-item__favourite">
-                  <i class="fas fa-check"></i>
-                  <span>Yêu thích</span>
-                </div>
-                <div class="home-product-item__sale-off">
-                  <span class="home-product-item__sale-off-percent">{{salePecents price salePrice}}</span>
-                  <span class="home-product-item__sale-off-label">GIẢM</span>
-                </div>
-              </a>
-            </div>
-              </div>
-          </div>
-        </div>
                 <ul class="pagination home-product__pagination">
                     <li class="pagination-item">
-                        <a href="" class="pagination-item__link">
+                        <a class="pagination-item__link" href="">
                             <i class="pagination-item__icon fas fa-angle-left"></i>
                         </a>
                     </li>
 
                     <li class="pagination-item pagination-item--active">
-                        <a href="/?page=1" class="pagination-item__link">1</a>
+                        <a class="pagination-item__link" href="/?page=1">1</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="/?page=2" class="pagination-item__link">2</a>
+                        <a class="pagination-item__link" href="/?page=2">2</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="/?page=3" class="pagination-item__link">3</a>
+                        <a class="pagination-item__link" href="/?page=3">3</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="" class="pagination-item__link">4</a>
+                        <a class="pagination-item__link" href="">4</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="" class="pagination-item__link">5</a>
+                        <a class="pagination-item__link" href="">5</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="" class="pagination-item__link">...</a>
+                        <a class="pagination-item__link" href="">...</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="" class="pagination-item__link">14</a>
+                        <a class="pagination-item__link" href="">14</a>
                     </li>
                     <li class="pagination-item">
-                        <a href="" class="pagination-item__link">
+                        <a class="pagination-item__link" href="">
                             <i class="pagination-item__icon fas fa-angle-right"></i>
                         </a>
                     </li>
@@ -190,51 +193,51 @@
     <div class="modal__overlay"></div>
     <div class="modal__body">
         <!-- Form register -->
-        {{!-- <div class="auth-form">
-          <div class="auth-form__container">
-            <div class="auth-form__header">
-              <h3 class="auth-form__heading">Đăng ký</h3>
-              <span class="auth-form__switch-btn">Đăng nhập</span>
+        {{!--
+        <div class="auth-form">
+            <div class="auth-form__container">
+                <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <span class="auth-form__switch-btn">Đăng nhập</span>
+                </div>
+                <div class="auth-form__form">
+                    <div class="auth-form__group">
+                        <input class="auth-form__input" placeholder="Email của bạn" type="text">
+                    </div>
+                    <div class="auth-form__group">
+                        <input class="auth-form__input" placeholder="Mật khẩu của bạn" type="password">
+                    </div>
+                    <div class="auth-form__group">
+                        <input class="auth-form__input" placeholder="Nhập lại mật khẩu" type="password">
+                    </div>
+                </div>
+                <div class="auth-form__aside">
+                    <p class="auth-form__policy-text">Bằng việc đăng kí, bạn đã đồng ý với F8Shop về
+                        <a class="auth-form__text-link" href="">Điều khoản dịch vụ</a> &
+                        <a class="auth-form__text-link" href="">Chính sách bảo mật</a>
+                    </p>
+                </div>
+                <div class="auth-form__control">
+                    <button class="btn btn--normal auth-form__control-back">TRỞ LẠI</button>
+                    <button class="btn btn--primary ">ĐĂNG KÝ</button>
+                </div>
             </div>
-            <div class="auth-form__form">
-              <div class="auth-form__group">
-                <input type="text" class="auth-form__input" placeholder="Email của bạn">
-              </div>
-              <div class="auth-form__group">
-                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
-              </div>
-              <div class="auth-form__group">
-                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
-              </div>
+            <div class="auth-form__socials">
+                <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon" href="">
+                    <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                    <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                </a>
+                <a class="auth-form__socials--google btn btn--size-s btn--with-icon" href="">
+                    <i class="auth-form__socials-icon fab fa-google"></i>
+                    <span class="auth-form__socials-title">Kết nối với Google</span>
+                </a>
             </div>
-
-            <div class="auth-form__aside">
-              <p class="auth-form__policy-text">Bằng việc đăng kí, bạn đã đồng ý với F8Shop về
-                <a class="auth-form__text-link" href="">Điều khoản dịch vụ</a> &
-                <a class="auth-form__text-link" href="">Chính sách bảo mật</a>
-              </p>
-            </div>
-
-            <div class="auth-form__control">
-              <button class="btn btn--normal auth-form__control-back">TRỞ LẠI</button>
-              <button class="btn btn--primary ">ĐĂNG KÝ</button>
-            </div>
-          </div>
-          <div class="auth-form__socials">
-            <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-              <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-              <span class="auth-form__socials-title">Kết nối với Facebook</span>
-            </a>
-            <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-              <i class="auth-form__socials-icon fab fa-google"></i>
-              <span class="auth-form__socials-title">Kết nối với Google</span>
-            </a>
-          </div>
-        </div> --}}
+        </div>
+        --}}
 
         <!-- Form login -->
-        <form method="GET" action="/">
-            <div id="auth-form-login" class="auth-form">
+        <form action="/" method="GET">
+            <div class="auth-form" id="auth-form-login">
                 <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng nhập</h3>
@@ -242,18 +245,18 @@
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            <input class="auth-form__input" placeholder="Email của bạn" type="text">
                         </div>
                         <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            <input class="auth-form__input" placeholder="Mật khẩu của bạn" type="password">
                         </div>
                     </div>
 
                     <div class="auth-form__aside">
                         <div class="auth-form__help">
-                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                            <a class="auth-form__help-link auth-form__help-forgot" href="">Quên mật khẩu</a>
                             <span class="auth-form__help-separate"></span>
-                            <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                            <a class="auth-form__help-link" href="">Cần trợ giúp?</a>
                         </div>
                     </div>
 
@@ -263,17 +266,16 @@
                     </div>
                 </div>
                 <div class="auth-form__socials">
-                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                    <a class="auth-form__socials--facebook btn btn--size-s btn--with-icon" href="">
                         <i class="auth-form__socials-icon fab fa-facebook-square"></i>
                         <span class="auth-form__socials-title">Kết nối với Facebook</span>
                     </a>
-                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                    <a class="auth-form__socials--google btn btn--size-s btn--with-icon" href="">
                         <i class="auth-form__socials-icon fab fa-google"></i>
                         <span class="auth-form__socials-title">Kết nối với Google</span>
                     </a>
                 </div>
             </div>
         </form>
-
     </div>
 </div>
